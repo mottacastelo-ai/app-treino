@@ -1,0 +1,388 @@
+{
+  "workouts": [
+    {
+      "key": "A",
+      "name": "Treino A",
+      "exercises": [
+        {
+          "id": "extensao-toracica-no-banco-ou-rolo",
+          "name": "Extensao toracica no banco ou rolo",
+          "sets": 2,
+          "reps": "10",
+          "section": "Aquecimento",
+          "notes": ""
+        },
+        {
+          "id": "rotacao-toracica-em-quadrupede",
+          "name": "Rotacao toracica em quadrupede",
+          "sets": 2,
+          "reps": "8 cada lado",
+          "section": "Aquecimento",
+          "notes": ""
+        },
+        {
+          "id": "wall-slide-a",
+          "name": "Wall slide",
+          "sets": 2,
+          "reps": "10",
+          "section": "Aquecimento",
+          "notes": ""
+        },
+        {
+          "id": "dead-bug-a",
+          "name": "Dead bug",
+          "sets": 2,
+          "reps": "10",
+          "section": "Aquecimento",
+          "notes": ""
+        },
+        {
+          "id": "bird-dog-aquecimento",
+          "name": "Bird dog",
+          "sets": 2,
+          "reps": "8 cada lado",
+          "section": "Aquecimento",
+          "notes": ""
+        },
+        {
+          "id": "abducao-com-elastico",
+          "name": "Abducao com elastico",
+          "sets": 2,
+          "reps": "20",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "ponte-de-gluteo",
+          "name": "Ponte de gluteo",
+          "sets": 2,
+          "reps": "12",
+          "section": "Ativacao",
+          "notes": "2s contracao"
+        },
+        {
+          "id": "leg-press-45",
+          "name": "Leg press 45",
+          "sets": 4,
+          "reps": "10-12",
+          "section": "Treino principal",
+          "notes": "Pes medios alinhados"
+        },
+        {
+          "id": "agachamento-goblet",
+          "name": "Agachamento goblet",
+          "sets": 3,
+          "reps": "10",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "step-up-baixo",
+          "name": "Step up baixo",
+          "sets": 3,
+          "reps": "10 cada perna",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "mesa-flexora-a",
+          "name": "Mesa flexora",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "hip-thrust",
+          "name": "Hip thrust",
+          "sets": 3,
+          "reps": "10",
+          "section": "Treino principal",
+          "notes": "2s topo"
+        },
+        {
+          "id": "panturrilha-em-pe",
+          "name": "Panturrilha em pe",
+          "sets": 4,
+          "reps": "15-20",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "pallof-press-a",
+          "name": "Pallof press",
+          "sets": 3,
+          "reps": "12 cada lado",
+          "section": "Core",
+          "notes": ""
+        },
+        {
+          "id": "prancha-a",
+          "name": "Prancha",
+          "sets": 3,
+          "reps": "30-40s",
+          "section": "Core",
+          "notes": ""
+        },
+        {
+          "id": "bird-dog-core",
+          "name": "Bird dog",
+          "sets": 2,
+          "reps": "10 cada lado",
+          "section": "Core",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "B",
+      "name": "Treino B",
+      "exercises": [
+        {
+          "id": "rotacao-externa-com-elastico-b",
+          "name": "Rotacao externa com elastico",
+          "sets": 2,
+          "reps": "15",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "wall-slide-b",
+          "name": "Wall slide",
+          "sets": 2,
+          "reps": "10",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "supino-maquina-halteres",
+          "name": "Supino maquina/halteres",
+          "sets": 4,
+          "reps": "10",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "remada-baixa-neutra",
+          "name": "Remada baixa neutra",
+          "sets": 4,
+          "reps": "10-12",
+          "section": "Treino principal",
+          "notes": "pausa 1s"
+        },
+        {
+          "id": "elevacao-lateral-b",
+          "name": "Elevacao lateral",
+          "sets": 3,
+          "reps": "12-15",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "face-pull-b",
+          "name": "Face pull",
+          "sets": 4,
+          "reps": "12-15",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "triceps-corda-b",
+          "name": "Triceps corda",
+          "sets": 3,
+          "reps": "12-15",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "rosca-direta-barra-w",
+          "name": "Rosca direta barra W",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "pallof-press-b",
+          "name": "Pallof press",
+          "sets": 2,
+          "reps": "12 cada lado",
+          "section": "Core",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "C",
+      "name": "Treino C",
+      "exercises": [
+        {
+          "id": "face-pull-leve",
+          "name": "Face pull leve",
+          "sets": 2,
+          "reps": "15",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "rotacao-externa-com-elastico-c",
+          "name": "Rotacao externa com elastico",
+          "sets": 2,
+          "reps": "15",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "supino-inclinado-halteres",
+          "name": "Supino inclinado halteres",
+          "sets": 3,
+          "reps": "10",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "pulldown-frente",
+          "name": "Pulldown frente",
+          "sets": 3,
+          "reps": "10-12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "crucifixo-invertido",
+          "name": "Crucifixo invertido",
+          "sets": 3,
+          "reps": "12-15",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "y-no-banco-inclinado",
+          "name": "Y no banco inclinado",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "triceps-unilateral-cabo",
+          "name": "Triceps unilateral cabo",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "rosca-martelo-c",
+          "name": "Rosca martelo",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "dead-bug-c",
+          "name": "Dead bug",
+          "sets": 2,
+          "reps": "10",
+          "section": "Core",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "key": "D",
+      "name": "Treino D",
+      "exercises": [
+        {
+          "id": "mobilidade-toracica",
+          "name": "Mobilidade toracica",
+          "sets": 2,
+          "reps": "10",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "wall-slide-d",
+          "name": "Wall slide",
+          "sets": 2,
+          "reps": "10",
+          "section": "Ativacao",
+          "notes": ""
+        },
+        {
+          "id": "crucifixo-no-cabo",
+          "name": "Crucifixo no cabo",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "flexao-inclinada-no-banco",
+          "name": "Flexao inclinada no banco",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "remada-unilateral-halter",
+          "name": "Remada unilateral halter",
+          "sets": 3,
+          "reps": "10 cada lado",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "pulley-triangulo",
+          "name": "Pulley triangulo",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "remada-alta-aberta-no-cabo",
+          "name": "Remada alta aberta no cabo",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "t-no-banco-inclinado",
+          "name": "T no banco inclinado",
+          "sets": 3,
+          "reps": "12",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "encolhimento-leve-com-pausa",
+          "name": "Encolhimento leve com pausa",
+          "sets": 3,
+          "reps": "15",
+          "section": "Treino principal",
+          "notes": "1-2s contracao"
+        },
+        {
+          "id": "face-pull-d",
+          "name": "Face pull",
+          "sets": 3,
+          "reps": "15",
+          "section": "Treino principal",
+          "notes": ""
+        },
+        {
+          "id": "prancha-lateral",
+          "name": "Prancha lateral",
+          "sets": 2,
+          "reps": "30s cada lado",
+          "section": "Core",
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}

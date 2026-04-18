@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#14213d">
+    <meta name="description" content="App pessoal de treino com funcionamento offline">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icons/icon-192.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Treino</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">Treino offline</p>
+        <h1>Meu Treino</h1>
+        <p class="subtitle">Rápido de usar, salvo no próprio celular.</p>
+      </header>
+
+      <main class="app-main">
+        <section id="page-home" class="page active" aria-label="Início">
+          <div class="panel">
+            <p class="section-label">Último treino</p>
+            <div id="last-workout-card" class="last-workout-card"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-header">
+              <p class="section-label">Treinos</p>
+              <button id="clear-current-workout" class="link-button" type="button">Limpar status atual</button>
+            </div>
+            <div id="workout-list" class="workout-list"></div>
+          </div>
+        </section>
+
+        <section id="page-workout" class="page" aria-label="Exercícios">
+          <div class="page-topbar">
+            <button id="back-to-home" class="icon-button" type="button" aria-label="Voltar para início">Voltar</button>
+            <div>
+              <p class="section-label">Exercícios</p>
+              <h2 id="workout-title">Treino</h2>
+            </div>
+          </div>
+
+          <div id="workout-summary" class="workout-summary"></div>
+          <div id="exercise-list" class="exercise-list"></div>
+        </section>
+
+        <section id="page-exercise" class="page" aria-label="Exercício">
+          <div class="page-topbar">
+            <button id="back-to-workout" class="icon-button" type="button" aria-label="Voltar para exercícios">Voltar</button>
+            <div>
+              <p class="section-label">Exercício</p>
+              <h2 id="exercise-title">Exercício</h2>
+            </div>
+          </div>
+
+          <div class="panel compact">
+            <div class="exercise-detail-grid">
+              <div>
+                <p class="small-label">Planejado</p>
+                <strong id="exercise-planned">-</strong>
+              </div>
+              <div>
+                <p class="small-label">Último desempenho</p>
+                <strong id="exercise-last-result">-</strong>
+                <p id="exercise-suggestion" class="small-label"></p>
+                <p id="exercise-trend" class="small-label"></p>
+              </div>
+            </div>
+          </div>
+
+          <form id="exercise-form" class="exercise-form" novalidate>
+            <div id="series-inputs" class="series-inputs"></div>
+
+            <label class="field">
+              <span>Observação</span>
+              <textarea id="exercise-note" rows="3" maxlength="200" placeholder="Opcional"></textarea>
+            </label>
+
+            <button class="primary-button" type="submit">Salvar exercício</button>
+            <button id="view-history-button" class="link-button align-left" type="button">Ver historico</button>
+          </form>
+        </section>
+
+        <section id="page-history" class="page" aria-label="Historico do exercicio">
+          <div class="page-topbar">
+            <button id="back-to-exercise" class="icon-button" type="button" aria-label="Voltar para exercicio">Voltar</button>
+            <div>
+              <p class="section-label">Historico</p>
+              <h2 id="history-title">Exercicio</h2>
+            </div>
+          </div>
+
+          <div class="history-summary">
+            <div class="history-summary-card">
+              <p class="small-label">Melhor serie do ultimo treino</p>
+              <strong id="history-best-recent">-</strong>
+            </div>
+            <div class="history-summary-card">
+              <p class="small-label">Evolucao das ultimas series</p>
+              <strong id="history-last-series-evolution">-</strong>
+            </div>
+            <div class="history-summary-card">
+              <p class="small-label">Tendencia</p>
+              <strong id="history-trend">-</strong>
+            </div>
+          </div>
+
+          <div id="history-list" class="history-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script id="treinos-inline" type="application/json">
+      {
+        "workouts": [
+          {
+            "key": "A",
+            "name": "Treino A",
+            "exercises": [
+              { "id": "supino-reto", "name": "Supino reto", "sets": 4, "reps": "12" },
+              { "id": "supino-inclinado-halter", "name": "Supino inclinado com halter", "sets": 4, "reps": "10" },
+              { "id": "crucifixo-maquina", "name": "Crucifixo máquina", "sets": 3, "reps": "12" },
+              { "id": "triceps-corda", "name": "Tríceps corda", "sets": 3, "reps": "12" },
+              { "id": "triceps-testa", "name": "Tríceps testa", "sets": 3, "reps": "10" }
+            ]
+          },
+          {
+            "key": "B",
+            "name": "Treino B",
+            "exercises": [
+              { "id": "puxada-frente", "name": "Puxada frente", "sets": 4, "reps": "12" },
+              { "id": "remada-baixa", "name": "Remada baixa", "sets": 4, "reps": "10" },
+              { "id": "remada-unilateral", "name": "Remada unilateral", "sets": 3, "reps": "12" },
+              { "id": "rosca-direta", "name": "Rosca direta", "sets": 3, "reps": "12" },
+              { "id": "rosca-martelo", "name": "Rosca martelo", "sets": 3, "reps": "10" }
+            ]
+          },
+          {
+            "key": "C",
+            "name": "Treino C",
+            "exercises": [
+              { "id": "agachamento-livre", "name": "Agachamento livre", "sets": 4, "reps": "10" },
+              { "id": "leg-press", "name": "Leg press", "sets": 4, "reps": "12" },
+              { "id": "cadeira-extensora", "name": "Cadeira extensora", "sets": 3, "reps": "12" },
+              { "id": "mesa-flexora", "name": "Mesa flexora", "sets": 3, "reps": "12" },
+              { "id": "panturrilha-em-pe", "name": "Panturrilha em pé", "sets": 4, "reps": "15" }
+            ]
+          },
+          {
+            "key": "D",
+            "name": "Treino D",
+            "exercises": [
+              { "id": "desenvolvimento-maquina", "name": "Desenvolvimento máquina", "sets": 4, "reps": "10" },
+              { "id": "elevacao-lateral", "name": "Elevação lateral", "sets": 3, "reps": "12" },
+              { "id": "elevacao-frontal", "name": "Elevação frontal", "sets": 3, "reps": "12" },
+              { "id": "abdominal-maquina", "name": "Abdominal máquina", "sets": 3, "reps": "15" },
+              { "id": "prancha", "name": "Prancha", "sets": 3, "reps": "30s" }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

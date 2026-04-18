@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Treino">
+  <rect width="192" height="192" rx="38" fill="#14213d" />
+  <circle cx="96" cy="96" r="62" fill="#20335f" />
+  <path d="M48 82h22v-14h14v14h24v-14h14v14h22v28h-22v14h-14v-14H84v14H70v-14H48z" fill="#fca311" />
+</svg>
