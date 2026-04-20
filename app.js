@@ -621,6 +621,15 @@
   }
 
   function registerEvents() {
+    document.addEventListener("click", function (event) {
+      var fullHistoryButton = event.target.closest("#open-full-history");
+      if (!fullHistoryButton) {
+        return;
+      }
+
+      openFullHistory();
+    });
+
     document.getElementById("workout-list").addEventListener("click", function (event) {
       var button = event.target.closest("[data-workout-key]");
       if (!button) {
