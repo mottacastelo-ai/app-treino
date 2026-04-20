@@ -327,27 +327,6 @@
     }).join("");
   }
 
-  function renderFullHistoryPage(items) {
-    var container = document.getElementById("full-history-list");
-    if (!container) {
-      return;
-    }
-
-    if (!items.length) {
-      container.innerHTML = '<div class="history-card"><p class="empty-state">Nenhum historico salvo ainda.</p></div>';
-      return;
-    }
-
-    container.innerHTML = items.map(function (item) {
-      return [
-        '<button class="full-history-item" type="button" data-full-history-id="' + item.id + '">',
-        '  <h3 class="full-history-name">' + item.name + '</h3>',
-        '  <p class="full-history-meta">' + item.count + ' registro(s)</p>',
-        '</button>'
-      ].join("");
-    }).join("");
-  }
-
   function showPage(pageId) {
     var pages = document.querySelectorAll(".page");
     pages.forEach(function (page) {
@@ -378,7 +357,6 @@
     renderWorkoutPage: renderWorkoutPage,
     renderExercisePage: renderExercisePage,
     renderExerciseHistoryPage: renderExerciseHistoryPage,
-    renderFullHistoryPage: renderFullHistoryPage,
     showPage: showPage,
     showToast: showToast
   };

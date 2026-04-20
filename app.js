@@ -438,79 +438,10 @@
     return StorageService.getWorkoutSession(state.currentWorkoutKey);
   }
 
-  function getExerciseByIdFromAllWorkouts(exerciseId) {
-    for (var i = 0; i < state.workouts.length; i += 1) {
-      var exercise = getExerciseById(state.workouts[i], exerciseId);
-      if (exercise) {
-        return exercise;
-      }
-    }
-
-    return null;
-  }
-
-  function getHistoryDisplayName(exerciseId) {
-    var currentExercise = getExerciseByIdFromAllWorkouts(exerciseId);
-    if (currentExercise && currentExercise.name) {
-      return currentExercise.name;
-    }
-
-    var entries = state.history[exerciseId];
-    if (Array.isArray(entries) && entries.length) {
-      var latestEntry = entries[entries.length - 1];
-      if (latestEntry && latestEntry.exerciseName) {
-        return latestEntry.exerciseName;
-      }
-    }
-
-    return exerciseId;
-  }
-
-  function openFullHistory() {
-    var items = Object.keys(state.history)
-      .filter(function (exerciseId) {
-        var entries = state.history[exerciseId];
-        return Array.isArray(entries) ? entries.length > 0 : Boolean(entries);
-      })
-      .map(function (exerciseId) {
-        var entries = state.history[exerciseId];
-        var count = Array.isArray(entries) ? entries.length : 1;
-
-        return {
-          id: exerciseId,
-          name: getHistoryDisplayName(exerciseId),
-          count: count
-        };
-      })
-      .sort(function (left, right) {
-        return left.name.localeCompare(right.name, "pt-BR");
-      });
-
-    UI.renderFullHistoryPage(items);
-    UI.showPage("page-full-history");
-  }
-
   function openExerciseHistory() {
     var workout = getWorkoutByKey(state.currentWorkoutKey);
     var exercise = getExerciseById(workout, state.currentExerciseId);
     UI.renderExerciseHistoryPage(exercise, state.history[state.currentExerciseId]);
-    UI.showPage("page-history");
-  }
-
-  function openExerciseHistoryById(exerciseId) {
-    var exercise = getExerciseByIdFromAllWorkouts(exerciseId);
-
-    if (exercise) {
-      state.currentExerciseId = exerciseId;
-      UI.renderExerciseHistoryPage(exercise, state.history[exerciseId]);
-      UI.showPage("page-history");
-      return;
-    }
-
-    UI.renderExerciseHistoryPage({
-      id: exerciseId,
-      name: getHistoryDisplayName(exerciseId)
-    }, state.history[exerciseId]);
     UI.showPage("page-history");
   }
 
@@ -621,15 +552,6 @@
   }
 
   function registerEvents() {
-    document.addEventListener("click", function (event) {
-      var fullHistoryButton = event.target.closest("#open-full-history");
-      if (!fullHistoryButton) {
-        return;
-      }
-
-      openFullHistory();
-    });
-
     document.getElementById("workout-list").addEventListener("click", function (event) {
       var button = event.target.closest("[data-workout-key]");
       if (!button) {
@@ -646,17 +568,7 @@
       openExercise(button.getAttribute("data-exercise-id"));
     });
 
-    document.getElementById("full-history-list").addEventListener("click", function (event) {
-      var button = event.target.closest("[data-full-history-id]");
-      if (!button) {
-        return;
-      }
-      openExerciseHistoryById(button.getAttribute("data-full-history-id"));
-    });
-
     document.getElementById("back-to-home").addEventListener("click", renderHome);
-    document.getElementById("back-to-home-from-full-history").addEventListener("click", renderHome);
-    document.getElementById("open-full-history").addEventListener("click", openFullHistory);
 
     document.getElementById("back-to-workout").addEventListener("click", function () {
       openWorkout(state.currentWorkoutKey);
