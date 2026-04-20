@@ -487,26 +487,33 @@ textarea {
   z-index: 1;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
   #page-home .panel:nth-of-type(2) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
-  #page-home .panel:nth-of-type(2) .section-header,
-  #page-home .panel:nth-of-type(2) #open-full-history,
-  #page-home .panel:nth-of-type(2) #workout-list {
-    grid-column: 1 / -1;
+  #page-home .panel:nth-of-type(2) .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   #page-home .panel:nth-of-type(2) #open-full-history {
-    justify-self: start;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
     min-height: 40px;
     padding: 8px 0;
-    z-index: 3;
   }
 
   #page-home .panel:nth-of-type(2) #workout-list {
+    position: relative;
     z-index: 1;
+    margin-top: 12px;
   }
 
   .app-shell {
