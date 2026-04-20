@@ -488,6 +488,27 @@ textarea {
 }
 
 @media (max-width: 380px) {
+  #page-home .panel:nth-of-type(2) {
+    grid-template-columns: 1fr;
+  }
+
+  #page-home .panel:nth-of-type(2) .section-header,
+  #page-home .panel:nth-of-type(2) #open-full-history,
+  #page-home .panel:nth-of-type(2) #workout-list {
+    grid-column: 1 / -1;
+  }
+
+  #page-home .panel:nth-of-type(2) #open-full-history {
+    justify-self: start;
+    min-height: 40px;
+    padding: 8px 0;
+    z-index: 3;
+  }
+
+  #page-home .panel:nth-of-type(2) #workout-list {
+    z-index: 1;
+  }
+
   .app-shell {
     padding-left: 10px;
     padding-right: 10px;
