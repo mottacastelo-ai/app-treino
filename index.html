@@ -46,6 +46,7 @@
 
           <div id="workout-summary" class="workout-summary"></div>
           <div id="exercise-list" class="exercise-list"></div>
+          <button id="finish-workout-backup" class="primary-button" type="button">Finalizar treino e gerar backup</button>
         </section>
 
         <section id="page-exercise" class="page" aria-label="Exercício">
@@ -115,54 +116,7 @@
     </div>
 
     <script id="treinos-inline" type="application/json">
-      {
-        "workouts": [
-          {
-            "key": "A",
-            "name": "Treino A",
-            "exercises": [
-              { "id": "supino-reto", "name": "Supino reto", "sets": 4, "reps": "12" },
-              { "id": "supino-inclinado-halter", "name": "Supino inclinado com halter", "sets": 4, "reps": "10" },
-              { "id": "crucifixo-maquina", "name": "Crucifixo máquina", "sets": 3, "reps": "12" },
-              { "id": "triceps-corda", "name": "Tríceps corda", "sets": 3, "reps": "12" },
-              { "id": "triceps-testa", "name": "Tríceps testa", "sets": 3, "reps": "10" }
-            ]
-          },
-          {
-            "key": "B",
-            "name": "Treino B",
-            "exercises": [
-              { "id": "puxada-frente", "name": "Puxada frente", "sets": 4, "reps": "12" },
-              { "id": "remada-baixa", "name": "Remada baixa", "sets": 4, "reps": "10" },
-              { "id": "remada-unilateral", "name": "Remada unilateral", "sets": 3, "reps": "12" },
-              { "id": "rosca-direta", "name": "Rosca direta", "sets": 3, "reps": "12" },
-              { "id": "rosca-martelo", "name": "Rosca martelo", "sets": 3, "reps": "10" }
-            ]
-          },
-          {
-            "key": "C",
-            "name": "Treino C",
-            "exercises": [
-              { "id": "agachamento-livre", "name": "Agachamento livre", "sets": 4, "reps": "10" },
-              { "id": "leg-press", "name": "Leg press", "sets": 4, "reps": "12" },
-              { "id": "cadeira-extensora", "name": "Cadeira extensora", "sets": 3, "reps": "12" },
-              { "id": "mesa-flexora", "name": "Mesa flexora", "sets": 3, "reps": "12" },
-              { "id": "panturrilha-em-pe", "name": "Panturrilha em pé", "sets": 4, "reps": "15" }
-            ]
-          },
-          {
-            "key": "D",
-            "name": "Treino D",
-            "exercises": [
-              { "id": "desenvolvimento-maquina", "name": "Desenvolvimento máquina", "sets": 4, "reps": "10" },
-              { "id": "elevacao-lateral", "name": "Elevação lateral", "sets": 3, "reps": "12" },
-              { "id": "elevacao-frontal", "name": "Elevação frontal", "sets": 3, "reps": "12" },
-              { "id": "abdominal-maquina", "name": "Abdominal máquina", "sets": 3, "reps": "15" },
-              { "id": "prancha", "name": "Prancha", "sets": 3, "reps": "30s" }
-            ]
-          }
-        ]
-      }
+      { "workouts": [] }
     </script>
     <script src="js/storage.js"></script>
     <script src="js/ui.js"></script>
