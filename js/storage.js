@@ -57,6 +57,18 @@
     return normalized;
   }
 
+  function getAllWorkoutSessions() {
+    var sessions = {};
+
+    Object.keys(window.localStorage).forEach(function (key) {
+      if (key.indexOf(PREFIX + ".session.") === 0) {
+        sessions[key.replace(PREFIX + ".session.", "")] = read(key, {});
+      }
+    });
+
+    return sessions;
+  }
+
   window.StorageService = {
     getHistory: function () {
       var history = normalizeHistory(read(PREFIX + ".history", {}));
@@ -80,6 +92,7 @@
     },
     clearWorkoutSession: function (workoutKey) {
       window.localStorage.removeItem(PREFIX + ".session." + workoutKey);
-    }
+    },
+    getAllWorkoutSessions: getAllWorkoutSessions
   };
 })();
